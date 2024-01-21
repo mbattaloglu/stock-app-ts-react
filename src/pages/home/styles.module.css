@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  gap: 2rem;
+  max-width: 75rem;
+  margin: 0rem auto;
+  padding: 1rem 0rem;
+  overflow-y: auto;
+}
+
+.left {
+  flex: 3;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid black;
+  padding-bottom: 1rem;
+}
+
+.title-container button {
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  background-color: black;
+  color: white;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.top-table-container {
+  overflow-y: auto;
+}
+
+.top-table-container h2 {
+  position: sticky;
+  background-color: white;
+  top: -0.1rem;
+  z-index: 2;
+}
+
+.table-title {
+  padding: 0.5rem 0;
+}
+
+.title-letter-space {
+  letter-spacing: 0.05rem;
+}
+
+.last-updated-text {
+  font-size: 0.7rem;
+  color: #585858;
+  font-weight: bold;
+}
+
+.top-title {
+  border-bottom: 0.1rem solid black;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 0.2rem;
+}
+
+.title-container button:hover {
+  border: 0.1rem solid black;
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 62rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 48rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 37.5rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .right {
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-height: 600px) {
+  .top-table-container {
+    height: 18rem;
+  }
+}
+
+@media screen and (min-height: 768px) {
+  .top-table-container {
+    height: 20rem;
+  }
+}
+
+@media screen and (min-height: 992px) {
+  .top-table-container {
+    height: 28rem;
+    flex: unset;
+  }
+}
+
+@media screen and (min-height: 1200px) {
+  .top-table-container {
+    height: 32rem;
+  }
+}
+
+@media screen and (min-height: 600px) and (max-width: 600px) {
+  .top-table-container {
+    height: unset;
+  }
+}

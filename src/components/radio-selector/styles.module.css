@@ -1,0 +1,135 @@
+.radio-button-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.chart-type-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 1rem;
+  background-color: #242424;
+  padding: 0.3rem;
+  pointer-events: all;
+}
+
+.button-collapse {
+  display: none;
+  border: none;
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #242424;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.show-radio-button-container {
+  display: block !important;
+}
+
+.hidden-radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-radio {
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.hidden-radio:checked + .custom-radio {
+  background-color: #4caf50;
+}
+
+.hidden-radio:checked + .custom-radio::after {
+  display: block;
+}
+
+@keyframes open-up {
+  from {
+    bottom: -43%;
+  }
+
+  to {
+    bottom: -3%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .chart-type-selector {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .chart-type-selector {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    padding-bottom: 3rem;
+    top: unset;
+    bottom: -3%;
+    animation: open-up 0.25s ease-in-out;
+    font-size: 1.5rem;
+  }
+
+  .custom-radio {
+    border-radius: 1rem;
+    padding: 0.75rem;
+    cursor: pointer;
+  }
+
+  .button-collapse {
+    display: block;
+    font-size: 2rem;
+    top: 2rem;
+  }
+
+  .radio-button-container {
+    display: none;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: all;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chart-type-selector {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    padding-bottom: 3rem;
+    top: unset;
+    bottom: -3%;
+    animation: open-up 0.25s ease-in-out;
+    font-size: 1rem;
+  }
+
+  .button-collapse {
+    font-size: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .radio-button-container {
+    display: none;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: all;
+  }
+}

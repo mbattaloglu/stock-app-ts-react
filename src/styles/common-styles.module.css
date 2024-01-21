@@ -1,0 +1,23 @@
+.increase {
+  color: #0F6800;
+}
+
+.decrease {
+  color: #D92C40 ;
+}
+
+.neutral {
+  color: #585858;
+}
+
+.silent {
+  color: #585858;
+  font-size: 0.85rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
